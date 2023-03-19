@@ -1,22 +1,21 @@
 import { useState, useEffect } from "react";
-function App () {
-  const [ count, settcount ] = useState ( 0 );
 
-  useEffect (() => {
-    Document.title = 'voce clicou ${count} vezes';
+function App() {
+  const [count, setcount] = useState(0);
 
+  useEffect(() => {
+    document.title = `Você clicou ${count} vezes`;
   });
-  retornar  (
-    <div>
-    <p> voce clicou {conte} vezes </p>
-    <botao onClick = { ( ) => settcount (contagem + 1) } >
-      clique aqui
-      </botao>
-      { /* para diminuir é so colocar count -1 */}
 
+  return (
+    <div>
+      <p>Você clicou {count} vezes</p>
+      <button onClick={() => setcount(count + 1)}>
+        Clique aqui
+      </button>
+      {/* Para diminuir, é só colocar count - 1 */}
     </div>
-  ) ;
-  {
-exportar aplicativo padrao ;
-  } 
-   
+  );
+}
+
+export default App
